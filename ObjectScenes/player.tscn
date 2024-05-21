@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://doeosjyp664sa"]
+[gd_scene load_steps=5 format=3 uid="uid://doeosjyp664sa"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1wn3t"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdb0i"]
+albedo_color = Color(0.4992, 0.96, 0.56064, 1)
+roughness = 0.48
+
 [sub_resource type="BoxMesh" id="BoxMesh_0iqrs"]
+material = SubResource("StandardMaterial3D_wdb0i")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6k5a8"]
 
