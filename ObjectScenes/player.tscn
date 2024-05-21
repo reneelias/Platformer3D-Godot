@@ -11,8 +11,9 @@ material = SubResource("StandardMaterial3D_wdb0i")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6k5a8"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("cameraController")]
 script = ExtResource("1_1wn3t")
+cameraController = NodePath("CameraController")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_0iqrs")

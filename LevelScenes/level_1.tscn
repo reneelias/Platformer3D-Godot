@@ -37,6 +37,7 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_tcm4i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
+cameraLerpSpeed = 0.125
 
 [node name="Blocks" type="Node3D" parent="."]
 
