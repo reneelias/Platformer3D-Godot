@@ -45,3 +45,7 @@ movement_jump={
 [physics]
 
 3d/physics_engine="JoltPhysics3D"
+
+[rendering]
+
+anti_aliasing/quality/msaa_3d=1
