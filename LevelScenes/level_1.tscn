@@ -31,6 +31,16 @@ mesh = SubResource("BoxMesh_pwtit")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_myq7o")
 
+[node name="Ramp" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.850159, -0.526526, 0, 0.526526, 0.850159, 0, 1.98503, -9.05575)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ramp"]
+mesh = SubResource("BoxMesh_pwtit")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ramp"]
+shape = SubResource("BoxShape3D_myq7o")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.774591, 0.00399591, 0.632449, -0.628123, 0.121789, 0.768524, -0.0739543, -0.992548, 0.0968464, 4.5167, 10.398, -0.0116036)
 shadow_enabled = true
