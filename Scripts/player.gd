@@ -7,6 +7,7 @@ var money = 0
 @export var cameraController : Node3D
 @export var cameraLerpSpeed : float = .1
 @export var camerTurnSpeed : float = 2
+@export var mouseMoveMaxSpeed : float = 10
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -25,6 +26,7 @@ func _physics_process(delta):
 		rotate_y(deg_to_rad(camerTurnSpeed))
 	elif Input.is_key_pressed(KEY_RIGHT):
 		rotate_y(deg_to_rad(-camerTurnSpeed))
+	
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
 	input_dir.rotated(rotation.y)
@@ -46,3 +48,14 @@ func _physics_process(delta):
 func addToMoney(amount):
 	money += amount
 	print(money)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		var mouseMoveEvent : InputEventMouseMotion = event
+		print(mouseMoveEvent.relative)
+		var mouseMoveX = mouseMoveEvent.relative.x
+		if mouseMoveX > 0:
+			mouseMoveX = min(mouseMoveX, mouseMoveMaxSpeed)
+		elif mouseMoveX < 0:
+			mouseMoveX = max(mouseMoveX, -mouseMoveMaxSpeed)
+		rotate_y(deg_to_rad(-mouseMoveX))
