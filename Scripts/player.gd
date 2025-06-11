@@ -43,6 +43,12 @@ func _physics_process(delta):
 	cameraController.rotation.y = rotation.y
 	# $CameraController.position = lerp($CameraController.position, position, cameraLerpSpeed)
 
+	if position.y < -1:
+		rotate(Vector3(1,0,0), deg_to_rad(2))
+		cameraController.rotation.x = rotation.x
+		rotate(Vector3(0,0,1), deg_to_rad(-2))
+		cameraController.rotation.z = rotation.z
+
 func addToMoney(amount):
 	money += amount
 	print(money)

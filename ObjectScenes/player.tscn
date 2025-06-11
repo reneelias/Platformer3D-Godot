@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://doeosjyp664sa"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_1wn3t"]
+[ext_resource type="Script" uid="uid://b07y40qi4vbuf" path="res://Scripts/player.gd" id="1_1wn3t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdb0i"]
 albedo_color = Color(0.4992, 0.96, 0.56064, 1)
@@ -28,5 +28,5 @@ top_level = true
 transform = Transform3D(1, 0, 0, 0, 0.89722, 0.441584, 0, -0.441584, 0.89722, 0, 2.58624, 4.63774)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController/CameraTarget"]
-transform = Transform3D(1, 0, 0, 0, 0.977864, -0.209243, 0, 0.209243, 0.977864, 0, 1.19209e-07, -1)
+transform = Transform3D(1, 0, 0, 0, 0.977784, -0.209619, 0, 0.209619, 0.977784, 0, 1.19209e-07, -1)
 current = true
